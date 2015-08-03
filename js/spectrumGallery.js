@@ -32,7 +32,7 @@ $('a[href="#/show-gallery"]').click(function(){
    // VERIFIED console.log("gallery link clicked"); 
    $('#overlay').show(500); // Show overlay VERIFIED
    //Show container // Verified:: 
-   $('#gallery-wrapper').width($(window).width()/1.75).height($(window).height()/1.5).css({
+   $('#gallery-wrapper').width($(window).width()/1.5).height($(window).height()/1.2).css({
     position:'absolute',
     left: ($(window).width() - $('#gallery-wrapper').outerWidth())/2,
     top: ($(window).height() - $('#gallery-wrapper').outerHeight())/2,
@@ -66,17 +66,7 @@ $('.close').click(function(){
 $(window).resize(function() {
   //IF Clause for mobile(2.0)  
     //if window height is less than container hieght, adjust container height 
-    if ($(window).height() <= $('#gallery-wrapper').height()) { 
-      $('#gallery-wrapper').height(($(window).height() - 20));   
-      $('#gallery-wrapper').css({
-            minHeight: 'none', 
-      }); 
-    }else{ 
-       $('#gallery-wrapper').height($(window).height()/1.5);  
-       $('#gallery-wrapper').css({
-            minHeight: 560, 
-       }); 
-    };  
+   
     
   $('#gallery-wrapper').css({
       left: ($(window).width() - $('#gallery-wrapper').outerWidth())/2, 
